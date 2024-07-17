@@ -1,0 +1,21 @@
+def Power(num, x):
+    if num == 0:
+        return 0
+    elif num == 1:
+        return 1
+    elif x == 0:
+        return 1
+    elif x == 1:
+        return num
+    elif x < 0:
+        print("Not Possible")
+    else:
+        ans = num
+        for i in range(x-1):
+            ans = ans*num
+        return ans
+
+userinput = int(input("Enter a number: "))
+power = int(input("Enter power: "))
+
+print(Power(userinput, power))
